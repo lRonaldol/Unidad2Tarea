@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Unidad2Tarea.Models.ViewModels.Raza>
+@{
+    Layout = "Layout";
+}
+
+<main class="main">
+
+    <section class="nav">
+        <h3>ABC de Razas</h3>
+        <nav>
+            <a href="~/Home">Todas</a>
+            <a href="~/Home">A</a>
+            <a href="~/Home">B</a>
+            <a href="~/Home">C</a>
+            <a href="~/Home/pais">Listado por país</a>
+            
+
+        </nav>
+    </section>
+    <section class="list">
+        @foreach(var p in Model)
+        {
+           <ul>
+            <li>
+                <a href="~/Home/Caracteristicas/@p.Nombre">
+                    <img src="~/imgs_perros/@(p.Id)_0.jpg">
+                    @p.Nombre
+                </a>
+            </li>
+           
+        </ul>  
+        }
+       
+    </section>
+</main>
